@@ -17,9 +17,6 @@ namespace 学生成绩管理系统
             InitializeComponent();
         }
 
-        private void 学生端个人信息_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }
