@@ -20,7 +20,7 @@ namespace 学生成绩管理系统
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string strCon = @"server=(local);database=成绩系统;Integrated security=true";
+            string strCon = @"server=(local);database=学生成绩管理系统;Integrated security=true";
             SqlConnection con = new SqlConnection();
             con.ConnectionString = strCon;
             con.Open();

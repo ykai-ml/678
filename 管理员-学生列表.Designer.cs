@@ -36,22 +36,22 @@
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
-            this.个人信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.成绩分析ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.成绩录入ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.成绩查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.班级列表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.课程列表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.教师列表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.学生列表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -120,7 +120,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(89, 27);
+            this.splitContainer1.Location = new System.Drawing.Point(156, 27);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -142,9 +142,48 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(969, 588);
+            this.splitContainer1.Size = new System.Drawing.Size(902, 588);
             this.splitContainer1.SplitterDistance = 188;
             this.splitContainer1.TabIndex = 14;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(364, 125);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(126, 25);
+            this.textBox4.TabIndex = 18;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(291, 128);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(67, 15);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "初始密码";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(367, 33);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(123, 25);
+            this.textBox3.TabIndex = 16;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(95, 125);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(121, 25);
+            this.textBox2.TabIndex = 15;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(618, 36);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 15);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "性别";
             // 
             // dataGridView1
             // 
@@ -155,7 +194,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(969, 396);
+            this.dataGridView1.Size = new System.Drawing.Size(902, 396);
             this.dataGridView1.TabIndex = 0;
             // 
             // toolStripButton1
@@ -173,7 +212,7 @@
             this.toolStripTextBox1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripTextBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 31);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 27);
             this.toolStripTextBox1.Text = "NAME";
             this.toolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -181,7 +220,7 @@
             // 
             this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(69, 28);
+            this.toolStripLabel1.Size = new System.Drawing.Size(69, 24);
             this.toolStripLabel1.Text = "退出账号";
             // 
             // toolStrip1
@@ -203,87 +242,52 @@
             this.toolStripTextBox2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripTextBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
             this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 31);
+            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 27);
             this.toolStripTextBox2.Text = "Sno";
             this.toolStripTextBox2.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // 个人信息ToolStripMenuItem
+            // 班级列表ToolStripMenuItem
             // 
-            this.个人信息ToolStripMenuItem.Name = "个人信息ToolStripMenuItem";
-            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
-            this.个人信息ToolStripMenuItem.Text = "班级列表";
+            this.班级列表ToolStripMenuItem.Name = "班级列表ToolStripMenuItem";
+            this.班级列表ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.班级列表ToolStripMenuItem.Text = "班级列表";
+            this.班级列表ToolStripMenuItem.Click += new System.EventHandler(this.班级列表ToolStripMenuItem_Click);
             // 
-            // 成绩分析ToolStripMenuItem
+            // 课程列表ToolStripMenuItem
             // 
-            this.成绩分析ToolStripMenuItem.Name = "成绩分析ToolStripMenuItem";
-            this.成绩分析ToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
-            this.成绩分析ToolStripMenuItem.Text = "课程列表";
+            this.课程列表ToolStripMenuItem.Name = "课程列表ToolStripMenuItem";
+            this.课程列表ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.课程列表ToolStripMenuItem.Text = "课程列表";
+            this.课程列表ToolStripMenuItem.Click += new System.EventHandler(this.课程列表ToolStripMenuItem_Click);
             // 
-            // 成绩录入ToolStripMenuItem
+            // 教师列表ToolStripMenuItem
             // 
-            this.成绩录入ToolStripMenuItem.Name = "成绩录入ToolStripMenuItem";
-            this.成绩录入ToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
-            this.成绩录入ToolStripMenuItem.Text = "教师列表";
+            this.教师列表ToolStripMenuItem.Name = "教师列表ToolStripMenuItem";
+            this.教师列表ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.教师列表ToolStripMenuItem.Text = "教师列表";
+            this.教师列表ToolStripMenuItem.Click += new System.EventHandler(this.教师列表ToolStripMenuItem_Click);
             // 
-            // 成绩查询ToolStripMenuItem
+            // 学生列表ToolStripMenuItem
             // 
-            this.成绩查询ToolStripMenuItem.Name = "成绩查询ToolStripMenuItem";
-            this.成绩查询ToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
-            this.成绩查询ToolStripMenuItem.Text = "学生列表";
+            this.学生列表ToolStripMenuItem.Name = "学生列表ToolStripMenuItem";
+            this.学生列表ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.学生列表ToolStripMenuItem.Text = "学生列表";
+            this.学生列表ToolStripMenuItem.Click += new System.EventHandler(this.学生列表ToolStripMenuItem_Click);
             // 
             // menuStrip1
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.成绩查询ToolStripMenuItem,
-            this.成绩录入ToolStripMenuItem,
-            this.成绩分析ToolStripMenuItem,
-            this.个人信息ToolStripMenuItem});
+            this.学生列表ToolStripMenuItem,
+            this.教师列表ToolStripMenuItem,
+            this.课程列表ToolStripMenuItem,
+            this.班级列表ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 27);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(89, 588);
+            this.menuStrip1.Size = new System.Drawing.Size(156, 588);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(618, 36);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 15);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "性别";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(95, 125);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 25);
-            this.textBox2.TabIndex = 15;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(367, 33);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(123, 25);
-            this.textBox3.TabIndex = 16;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(291, 128);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 15);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "初始密码";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(364, 125);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(126, 25);
-            this.textBox4.TabIndex = 18;
             // 
             // 管理员_学生列表
             // 
@@ -327,10 +331,10 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
-        private System.Windows.Forms.ToolStripMenuItem 个人信息ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 成绩分析ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 成绩录入ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 成绩查询ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 班级列表ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 课程列表ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 教师列表ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 学生列表ToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
