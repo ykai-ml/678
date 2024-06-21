@@ -63,12 +63,14 @@
             this.成绩查询ToolStripMenuItem.Name = "成绩查询ToolStripMenuItem";
             this.成绩查询ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.成绩查询ToolStripMenuItem.Text = "成绩查询";
+            this.成绩查询ToolStripMenuItem.Click += new System.EventHandler(this.成绩查询ToolStripMenuItem_Click);
             // 
             // 成绩录入ToolStripMenuItem
             // 
             this.成绩录入ToolStripMenuItem.Name = "成绩录入ToolStripMenuItem";
             this.成绩录入ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.成绩录入ToolStripMenuItem.Text = "成绩录入";
+            this.成绩录入ToolStripMenuItem.Click += new System.EventHandler(this.成绩录入ToolStripMenuItem_Click);
             // 
             // 成绩分析ToolStripMenuItem
             // 

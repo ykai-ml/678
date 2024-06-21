@@ -21,5 +21,17 @@ namespace 学生成绩管理系统
         {
 
         }
+
+        private void 成绩查询ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new 教师端_成绩查询().Show();
+        }
+
+        private void 成绩录入ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new 教师端_成绩录入().Show();
+        }
     }
 }
