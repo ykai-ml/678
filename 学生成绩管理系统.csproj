@@ -132,6 +132,9 @@
     <EmbeddedResource Include="教师端登录界面.resx">
       <DependentUpon>教师端登录界面.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="管理员-学生列表.resx">
+      <DependentUpon>管理员-学生列表.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="管理员登录界面.resx">
       <DependentUpon>管理员登录界面.cs</DependentUpon>
     </EmbeddedResource>

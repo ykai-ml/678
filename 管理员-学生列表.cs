@@ -16,5 +16,10 @@ namespace 学生成绩管理系统
         {
             InitializeComponent();
         }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
