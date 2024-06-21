@@ -116,7 +116,7 @@
             this.课程信息ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 27);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(158, 535);
+            this.menuStrip1.Size = new System.Drawing.Size(91, 535);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -311,6 +311,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "学生端个人信息";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "学生端个人信息";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
