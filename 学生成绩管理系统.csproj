@@ -60,11 +60,23 @@
     <Compile Include="学生端-成绩查询.Designer.cs">
       <DependentUpon>学生端-成绩查询.cs</DependentUpon>
     </Compile>
+    <Compile Include="学生端-管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="学生端-管理.Designer.cs">
+      <DependentUpon>学生端-管理.cs</DependentUpon>
+    </Compile>
     <Compile Include="学生端-综测.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="学生端-综测.Designer.cs">
       <DependentUpon>学生端-综测.cs</DependentUpon>
+    </Compile>
+    <Compile Include="学生端-课程信息.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="学生端-课程信息.Designer.cs">
+      <DependentUpon>学生端-课程信息.cs</DependentUpon>
     </Compile>
     <Compile Include="学生端个人信息.cs">
       <SubType>Form</SubType>
@@ -147,8 +159,14 @@
     <EmbeddedResource Include="学生端-成绩查询.resx">
       <DependentUpon>学生端-成绩查询.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="学生端-管理.resx">
+      <DependentUpon>学生端-管理.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="学生端-综测.resx">
       <DependentUpon>学生端-综测.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="学生端-课程信息.resx">
+      <DependentUpon>学生端-课程信息.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="学生端个人信息.resx">
       <DependentUpon>学生端个人信息.cs</DependentUpon>
