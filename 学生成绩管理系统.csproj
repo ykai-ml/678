@@ -66,6 +66,12 @@
     <Compile Include="学生端登录界面.Designer.cs">
       <DependentUpon>学生端登录界面.cs</DependentUpon>
     </Compile>
+    <Compile Include="教师端-成绩查询.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="教师端-成绩查询.Designer.cs">
+      <DependentUpon>教师端-成绩查询.cs</DependentUpon>
+    </Compile>
     <Compile Include="教师端登录界面.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="学生端登录界面.resx">
       <DependentUpon>学生端登录界面.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="教师端-成绩查询.resx">
+      <DependentUpon>教师端-成绩查询.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="教师端登录界面.resx">
       <DependentUpon>教师端登录界面.cs</DependentUpon>
