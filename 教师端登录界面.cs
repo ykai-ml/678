@@ -37,7 +37,7 @@ namespace 学生成绩管理系统
                 {
                     this.Hide();
                     //教师端窗口显示
-
+                    new 教师端_成绩查询().Show();
                 }
                 else
                 {
