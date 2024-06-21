@@ -33,5 +33,11 @@ namespace 学生成绩管理系统
             this.Hide();
             new 教师端_成绩录入().Show();
         }
+
+        private void 个人信息ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new 教师端_个人信息().Show();
+        }
     }
 }

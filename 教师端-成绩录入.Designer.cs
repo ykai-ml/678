@@ -81,6 +81,7 @@
             this.个人信息ToolStripMenuItem.Name = "个人信息ToolStripMenuItem";
             this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.个人信息ToolStripMenuItem.Text = "个人信息";
+            this.个人信息ToolStripMenuItem.Click += new System.EventHandler(this.个人信息ToolStripMenuItem_Click);
             // 
             // toolStrip1
             // 
