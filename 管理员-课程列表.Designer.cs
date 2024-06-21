@@ -184,7 +184,8 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.SkyBlue;
+            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(758, 30);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 38);
@@ -195,20 +196,20 @@
             // 课程列表ToolStripMenuItem
             // 
             this.课程列表ToolStripMenuItem.Name = "课程列表ToolStripMenuItem";
-            this.课程列表ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.课程列表ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.课程列表ToolStripMenuItem.Text = "课程列表";
             // 
             // 教师列表ToolStripMenuItem
             // 
             this.教师列表ToolStripMenuItem.Name = "教师列表ToolStripMenuItem";
-            this.教师列表ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.教师列表ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.教师列表ToolStripMenuItem.Text = "教师列表";
             this.教师列表ToolStripMenuItem.Click += new System.EventHandler(this.教师列表ToolStripMenuItem_Click);
             // 
             // 学生列表ToolStripMenuItem
             // 
             this.学生列表ToolStripMenuItem.Name = "学生列表ToolStripMenuItem";
-            this.学生列表ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.学生列表ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.学生列表ToolStripMenuItem.Text = "学生列表";
             this.学生列表ToolStripMenuItem.Click += new System.EventHandler(this.学生列表ToolStripMenuItem_Click);
             // 
@@ -230,7 +231,7 @@
             // 班级列表ToolStripMenuItem
             // 
             this.班级列表ToolStripMenuItem.Name = "班级列表ToolStripMenuItem";
-            this.班级列表ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.班级列表ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.班级列表ToolStripMenuItem.Text = "班级列表";
             this.班级列表ToolStripMenuItem.Click += new System.EventHandler(this.班级列表ToolStripMenuItem_Click);
             // 

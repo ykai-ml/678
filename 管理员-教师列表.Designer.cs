@@ -95,14 +95,14 @@
             this.班级列表ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 27);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(156, 636);
+            this.menuStrip1.Size = new System.Drawing.Size(89, 636);
             this.menuStrip1.TabIndex = 15;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // 学生列表ToolStripMenuItem
             // 
             this.学生列表ToolStripMenuItem.Name = "学生列表ToolStripMenuItem";
-            this.学生列表ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.学生列表ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.学生列表ToolStripMenuItem.Text = "学生列表";
             this.学生列表ToolStripMenuItem.Click += new System.EventHandler(this.学生列表ToolStripMenuItem_Click);
             // 
@@ -115,14 +115,14 @@
             // 课程列表ToolStripMenuItem
             // 
             this.课程列表ToolStripMenuItem.Name = "课程列表ToolStripMenuItem";
-            this.课程列表ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.课程列表ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.课程列表ToolStripMenuItem.Text = "课程列表";
             this.课程列表ToolStripMenuItem.Click += new System.EventHandler(this.课程列表ToolStripMenuItem_Click);
             // 
             // 班级列表ToolStripMenuItem
             // 
             this.班级列表ToolStripMenuItem.Name = "班级列表ToolStripMenuItem";
-            this.班级列表ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.班级列表ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.班级列表ToolStripMenuItem.Text = "班级列表";
             this.班级列表ToolStripMenuItem.Click += new System.EventHandler(this.班级列表ToolStripMenuItem_Click);
             // 
@@ -209,7 +209,8 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.SkyBlue;
+            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(1092, 24);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 38);
