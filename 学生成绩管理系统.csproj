@@ -66,6 +66,12 @@
     <Compile Include="教师端登录界面.Designer.cs">
       <DependentUpon>教师端登录界面.cs</DependentUpon>
     </Compile>
+    <Compile Include="管理员-学生列表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="管理员-学生列表.Designer.cs">
+      <DependentUpon>管理员-学生列表.cs</DependentUpon>
+    </Compile>
     <Compile Include="管理员登录界面.cs">
       <SubType>Form</SubType>
     </Compile>
