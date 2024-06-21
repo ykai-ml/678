@@ -97,12 +97,13 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(733, 123);
+            this.button1.BackColor = System.Drawing.Color.SkyBlue;
+            this.button1.Location = new System.Drawing.Point(661, 120);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 38);
             this.button1.TabIndex = 8;
             this.button1.Text = "录入";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // comboBox1
             // 
@@ -111,7 +112,7 @@
             "20级",
             "21级",
             "22级"});
-            this.comboBox1.Location = new System.Drawing.Point(707, 33);
+            this.comboBox1.Location = new System.Drawing.Point(661, 33);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 5;
@@ -248,7 +249,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(651, 36);
+            this.label4.Location = new System.Drawing.Point(618, 36);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 15);
             this.label4.TabIndex = 14;
@@ -271,7 +272,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(291, 135);
+            this.label5.Location = new System.Drawing.Point(291, 128);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 15);
             this.label5.TabIndex = 17;
@@ -279,7 +280,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(364, 129);
+            this.textBox4.Location = new System.Drawing.Point(364, 125);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(126, 25);
             this.textBox4.TabIndex = 18;

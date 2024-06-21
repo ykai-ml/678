@@ -96,6 +96,12 @@
     <Compile Include="管理员-学生列表.Designer.cs">
       <DependentUpon>管理员-学生列表.cs</DependentUpon>
     </Compile>
+    <Compile Include="管理员-教师列表.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="管理员-教师列表.Designer.cs">
+      <DependentUpon>管理员-教师列表.cs</DependentUpon>
+    </Compile>
     <Compile Include="管理员登录界面.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="管理员-学生列表.resx">
       <DependentUpon>管理员-学生列表.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="管理员-教师列表.resx">
+      <DependentUpon>管理员-教师列表.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="管理员登录界面.resx">
       <DependentUpon>管理员登录界面.cs</DependentUpon>
