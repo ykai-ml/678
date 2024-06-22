@@ -68,34 +68,34 @@
             this.个人信息ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 27);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(156, 423);
+            this.menuStrip1.Size = new System.Drawing.Size(89, 423);
             this.menuStrip1.TabIndex = 9;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // 成绩查询ToolStripMenuItem
             // 
             this.成绩查询ToolStripMenuItem.Name = "成绩查询ToolStripMenuItem";
-            this.成绩查询ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.成绩查询ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.成绩查询ToolStripMenuItem.Text = "成绩查询";
             // 
             // 成绩录入ToolStripMenuItem
             // 
             this.成绩录入ToolStripMenuItem.Name = "成绩录入ToolStripMenuItem";
-            this.成绩录入ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.成绩录入ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.成绩录入ToolStripMenuItem.Text = "成绩录入";
             this.成绩录入ToolStripMenuItem.Click += new System.EventHandler(this.成绩录入ToolStripMenuItem_Click);
             // 
             // 成绩分析ToolStripMenuItem
             // 
             this.成绩分析ToolStripMenuItem.Name = "成绩分析ToolStripMenuItem";
-            this.成绩分析ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.成绩分析ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.成绩分析ToolStripMenuItem.Text = "成绩分析";
             this.成绩分析ToolStripMenuItem.Click += new System.EventHandler(this.成绩分析ToolStripMenuItem_Click);
             // 
             // 个人信息ToolStripMenuItem
             // 
             this.个人信息ToolStripMenuItem.Name = "个人信息ToolStripMenuItem";
-            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.个人信息ToolStripMenuItem.Text = "个人信息";
             this.个人信息ToolStripMenuItem.Click += new System.EventHandler(this.个人信息ToolStripMenuItem_Click);
             // 
@@ -119,6 +119,7 @@
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(69, 24);
             this.toolStripLabel1.Text = "退出账号";
+            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
             // toolStripTextBox2
             // 
