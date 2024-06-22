@@ -14,14 +14,27 @@ namespace 学生成绩管理系统
 {
     public partial class 教师端_成绩查询 : Form
     {
-        string strCon = @"server=(local);database=成绩系统;Integrated security=true";
+        
         public 教师端_成绩查询()
         {
             InitializeComponent();
             toolStripTextBox1.Text = LoadInfor.T_Sname;
             toolStripTextBox2.Text = LoadInfor.T_Sno;
+            populate();
         }
-
+        SqlConnection Con = new SqlConnection(@"server=(local);database=学生成绩管理系统;Integrated security=true");
+        private void populate()
+        {
+            Con.Open();
+            string query = "select * from 选课$";
+            SqlDataAdapter sda = new SqlDataAdapter(query, Con);//创建数据的批量抓取
+            SqlCommandBuilder builder = new SqlCommandBuilder(sda);//组合使用可用来批量处理数据库数据
+            //创建虚拟数据库
+            var ds = new DataSet();
+            sda.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+            Con.Close();
+        }
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -34,16 +47,30 @@ namespace 学生成绩管理系统
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection(strCon))
+            /*
+            if (textBox1.Text != "" && textBox2.Text == "" && textBox3.Text == "")
             {
-                string strCmd = "select * from book where 年级='{0}' and 班级='{0}' and 学号='{0}'";
-                strCmd = string.Format(strCmd, comboBox1.Text, comboBox2.Text, textBox1.Text);
-                SqlDataAdapter da = new SqlDataAdapter(strCmd, con);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-                dataGridView1.DataSource = ds.Tables[0].DefaultView;
+                try
+                {
+                    Con.Open();
+                    string query = "select  班级名,学号,成绩 from 选课$,学生$,班级$ where ";
+                    SqlCommand cmd = new SqlCommand(query, Con);//cmd对象向数据库发送增删改查操作的sql语句
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("该条信息保存成功！！");
+                    Con.Close();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
             }
+            }
+            else
+            {
+               }
+            */
         }
+
 
         private void 成绩录入ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -67,6 +94,21 @@ namespace 学生成绩管理系统
         {
             this.Hide();
             new 教师端登录界面().Show();
+        }
+
+        private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
