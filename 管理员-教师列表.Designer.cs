@@ -303,6 +303,7 @@
             this.Name = "管理员_教师列表";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "管理员_教师列表";
+            this.Load += new System.EventHandler(this.管理员_教师列表_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);

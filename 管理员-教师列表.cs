@@ -15,6 +15,8 @@ namespace 学生成绩管理系统
         public 管理员_教师列表()
         {
             InitializeComponent();
+            toolStripTextBox2.Text = LoadInfor.G_Sno;
+            toolStripTextBox1.Text = LoadInfor.G_Sname;
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
@@ -44,6 +46,11 @@ namespace 学生成绩管理系统
         {
             this.Hide();
             new 管理员登录界面().Show();
+        }
+
+        private void 管理员_教师列表_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
