@@ -26,6 +26,17 @@ namespace 学生成绩管理系统
             con.Open();
             if (con.State == ConnectionState.Open)
             {
+                LoadInfor.X_Sno = textBox1.Text;
+                string Name = "select * from 学生$ where 学号='{0}'";
+                Name = string.Format(Name, textBox1.Text.Trim());
+                SqlCommand command1 = new SqlCommand();
+                command1.Connection = con;
+                command1.CommandText = Name;
+                SqlDataReader reader = command1.ExecuteReader();
+                reader.Read();
+                LoadInfor.X_Sname = (string)reader["姓名"];
+                reader.Close();
+
                 string strCmd = "select * from 学生$ where 学号='{0}' and 密码='{1}'";
                 strCmd = string.Format(strCmd, textBox1.Text.Trim(), textBox2.Text.Trim());
                 SqlCommand command = new SqlCommand();

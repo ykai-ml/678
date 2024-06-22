@@ -15,6 +15,8 @@ namespace 学生成绩管理系统
         public 学生端_成绩查询()
         {
             InitializeComponent();
+            toolStripTextBox1.Text = LoadInfor.X_Sname;
+            toolStripTextBox2.Text = LoadInfor.X_Sno;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
