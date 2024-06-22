@@ -20,13 +20,14 @@ namespace 学生成绩管理系统
             InitializeComponent();
             toolStripTextBox1.Text = LoadInfor.T_Sname;
             toolStripTextBox2.Text = LoadInfor.T_Sno;
-            populate();
+            //chaxun();
         }
         SqlConnection Con = new SqlConnection(@"server=(local);database=学生成绩管理系统;Integrated security=true");
-        private void populate()
+        /*
+        private void chaxun()
         {
             Con.Open();
-            string query = "select * from 选课$";
+            string query = "select 班级号,学号,成绩 from 选课$,学生$,班级$ where 班级号 = '"+ textBox1 + "' , 课程号='"+ textBox2 + "',学号='"+textBox3+"'";
             SqlDataAdapter sda = new SqlDataAdapter(query, Con);//创建数据的批量抓取
             SqlCommandBuilder builder = new SqlCommandBuilder(sda);//组合使用可用来批量处理数据库数据
             //创建虚拟数据库
@@ -35,6 +36,7 @@ namespace 学生成绩管理系统
             dataGridView1.DataSource = ds.Tables[0];
             Con.Close();
         }
+        */
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -47,28 +49,49 @@ namespace 学生成绩管理系统
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*
-            if (textBox1.Text != "" && textBox2.Text == "" && textBox3.Text == "")
-            {
-                try
-                {
-                    Con.Open();
-                    string query = "select  班级名,学号,成绩 from 选课$,学生$,班级$ where ";
-                    SqlCommand cmd = new SqlCommand(query, Con);//cmd对象向数据库发送增删改查操作的sql语句
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("该条信息保存成功！！");
-                    Con.Close();
-                }
-                catch (Exception Ex)
-                {
-                    MessageBox.Show(Ex.Message);
-                }
-            }
-            }
-            else
-            {
-               }
-            */
+            //chaxun();
+            /* 
+             if (textBox1.Text != "" && textBox2.Text == "" && textBox3.Text == "")
+             {
+                 try
+                 {
+                     Con.Open();
+                     string query = "select  班级名,学号,成绩 from 选课$,学生$,班级$ where ";
+                     SqlCommand cmd = new SqlCommand(query, Con);//cmd对象向数据库发送增删改查操作的sql语句
+                     cmd.ExecuteNonQuery();
+                     MessageBox.Show("该条信息保存成功！！");
+                     Con.Close();
+                 }
+                 catch (Exception Ex)
+                 {
+                     MessageBox.Show(Ex.Message);
+                 }
+             }
+            else if(textBox1.Text == "" && textBox2.Text != "" && textBox3.Text == "")
+             {
+
+             }
+             else if (textBox1.Text == "" && textBox2.Text == "" && textBox3.Text != "")
+             {
+
+             }
+             else if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text == "")
+             {
+
+             }
+             else if (textBox1.Text != "" && textBox2.Text == "" && textBox3.Text != "")
+             {
+
+             }
+             else if (textBox1.Text == "" && textBox2.Text != "" && textBox3.Text != "")
+             {
+
+             }
+             else if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "")
+             {
+
+             }
+             */
         }
 
 
