@@ -281,6 +281,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "教师端_个人信息";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "教师端_个人信息";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);

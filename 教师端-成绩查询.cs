@@ -18,6 +18,8 @@ namespace 学生成绩管理系统
         public 教师端_成绩查询()
         {
             InitializeComponent();
+            toolStripTextBox1.Text = LoadInfor.T_Sname;
+            toolStripTextBox2.Text = LoadInfor.T_Sno;
         }
 
         private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)

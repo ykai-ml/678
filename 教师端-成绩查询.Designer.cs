@@ -264,6 +264,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.splitContainer1);
             this.Name = "教师端_成绩查询";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "教师端_成绩查询";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

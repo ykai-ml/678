@@ -157,6 +157,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.toolStrip2);
             this.Name = "教师端_成绩录入";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "教师端_成绩录入";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

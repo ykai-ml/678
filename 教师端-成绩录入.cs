@@ -15,6 +15,8 @@ namespace 学生成绩管理系统
         public 教师端_成绩录入()
         {
             InitializeComponent();
+            toolStripTextBox1.Text = LoadInfor.T_Sname;
+            toolStripTextBox2.Text = LoadInfor.T_Sno;
         }
 
         private void 成绩查询ToolStripMenuItem_Click(object sender, EventArgs e)
