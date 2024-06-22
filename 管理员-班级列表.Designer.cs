@@ -38,6 +38,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -46,7 +47,8 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -92,6 +94,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.button4);
+            this.splitContainer1.Panel1.Controls.Add(this.button3);
             this.splitContainer1.Panel1.Controls.Add(this.label6);
             this.splitContainer1.Panel1.Controls.Add(this.textBox3);
             this.splitContainer1.Panel1.Controls.Add(this.textBox1);
@@ -139,11 +143,23 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "班级名";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(306, 79);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(95, 38);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "删除";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(277, 78);
+            this.button1.Location = new System.Drawing.Point(104, 79);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 38);
             this.button1.TabIndex = 8;
@@ -228,17 +244,29 @@
             this.toolStripTextBox1.Text = "NAME";
             this.toolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button2
+            // button4
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(479, 78);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 38);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "删除";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button4.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(710, 79);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(95, 37);
+            this.button4.TabIndex = 26;
+            this.button4.Text = "修改";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(510, 79);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(95, 38);
+            this.button3.TabIndex = 25;
+            this.button3.Text = "查找";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // 管理员_班级列表
             // 
@@ -286,5 +314,7 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
     }
 }

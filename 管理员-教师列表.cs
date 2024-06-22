@@ -104,5 +104,35 @@ namespace 学生成绩管理系统
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)//查找
+        {
+            using (SqlConnection con = new SqlConnection(strCon))
+            {
+                string strCmd = "select * from 教师表$ where 教工号={0}";
+                strCmd = string.Format(strCmd, textBox1.Text);
+                SqlDataAdapter da = new SqlDataAdapter(strCmd, con);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0].DefaultView;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)//修改
+        {
+            string id = dataGridView1.CurrentRow.Cells["教工号"].Value.ToString();
+            using (SqlConnection con = new SqlConnection(strCon))
+            {
+                con.Open();
+                if (con.State == ConnectionState.Open)
+                {
+                    string strCmd = "update 教师表$ set 教师名='{0}',密码={1} where 教工号='{2}'";
+                    strCmd = string.Format(strCmd, textBox3.Text, textBox4.Text, id);
+                    SqlCommand command = new SqlCommand(strCmd, con);
+                    command.ExecuteNonQuery();
+                    InitTeacher();
+                }
+            }
+        }
     }
 }

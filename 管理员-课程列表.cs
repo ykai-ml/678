@@ -98,5 +98,35 @@ namespace 学生成绩管理系统
                 }
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)//查找
+        {
+            using (SqlConnection con = new SqlConnection(strCon))
+            {
+                string strCmd = "select * from 课程$ where 课程号={0}";
+                strCmd = string.Format(strCmd, textBox1.Text);
+                SqlDataAdapter da = new SqlDataAdapter(strCmd, con);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0].DefaultView;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)//修改
+        {
+            string id = dataGridView1.CurrentRow.Cells["课程号"].Value.ToString();
+            using (SqlConnection con = new SqlConnection(strCon))
+            {
+                con.Open();
+                if (con.State == ConnectionState.Open)
+                {
+                    string strCmd = "update 课程$ set 课程名='{0}',学分={1} where 课程号='{2}'";
+                    strCmd = string.Format(strCmd, textBox3.Text, textBox2.Text, id);
+                    SqlCommand command = new SqlCommand(strCmd, con);
+                    command.ExecuteNonQuery();
+                    InitCourse();
+                }
+            }
+        }
     }
 }

@@ -37,18 +37,20 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.课程列表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.教师列表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.学生列表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.班级列表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -138,6 +140,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.button4);
+            this.splitContainer1.Panel1.Controls.Add(this.button3);
             this.splitContainer1.Panel1.Controls.Add(this.label6);
             this.splitContainer1.Panel1.Controls.Add(this.textBox2);
             this.splitContainer1.Panel1.Controls.Add(this.textBox3);
@@ -155,12 +159,28 @@
             this.splitContainer1.SplitterDistance = 159;
             this.splitContainer1.TabIndex = 20;
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(799, 33);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(171, 25);
+            this.textBox2.TabIndex = 16;
+            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(467, 30);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(171, 25);
             this.textBox3.TabIndex = 16;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(741, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 15);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "学分";
             // 
             // textBox1
             // 
@@ -178,11 +198,23 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "课程名";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(394, 105);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(95, 38);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "删除";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(245, 105);
+            this.button1.Location = new System.Drawing.Point(196, 105);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(95, 38);
             this.button1.TabIndex = 8;
@@ -232,33 +264,29 @@
             this.班级列表ToolStripMenuItem.Text = "班级列表";
             this.班级列表ToolStripMenuItem.Click += new System.EventHandler(this.班级列表ToolStripMenuItem_Click);
             // 
-            // label2
+            // button4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(741, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 15);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "学分";
+            this.button4.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(778, 105);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(95, 37);
+            this.button4.TabIndex = 24;
+            this.button4.Text = "修改";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // textBox2
+            // button3
             // 
-            this.textBox2.Location = new System.Drawing.Point(799, 33);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(171, 25);
-            this.textBox2.TabIndex = 16;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(634, 105);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 38);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "删除";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button3.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(578, 105);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(95, 38);
+            this.button3.TabIndex = 23;
+            this.button3.Text = "查找";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // 管理员_课程列表
             // 
@@ -309,5 +337,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
     }
 }

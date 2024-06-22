@@ -99,5 +99,35 @@ namespace 学生成绩管理系统
                 }
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)//查找
+        {
+            using (SqlConnection con = new SqlConnection(strCon))
+            {
+                string strCmd = "select * from 班级$ where 班级号={0}";
+                strCmd = string.Format(strCmd, textBox1.Text);
+                SqlDataAdapter da = new SqlDataAdapter(strCmd, con);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0].DefaultView;
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)//修改
+        {
+            string id = dataGridView1.CurrentRow.Cells["班级号"].Value.ToString();
+            using (SqlConnection con = new SqlConnection(strCon))
+            {
+                con.Open();
+                if (con.State == ConnectionState.Open)
+                {
+                    string strCmd = "update 班级$ set 班级名='{0}' where 班级号='{1}'";
+                    strCmd = string.Format(strCmd, textBox3.Text, id);
+                    SqlCommand command = new SqlCommand(strCmd, con);
+                    command.ExecuteNonQuery();
+                    InitClass();
+                }
+            }
+        }
     }
 }
