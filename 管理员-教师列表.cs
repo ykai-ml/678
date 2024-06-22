@@ -99,5 +99,10 @@ namespace 学生成绩管理系统
                 }
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
