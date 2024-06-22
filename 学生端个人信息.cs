@@ -40,5 +40,11 @@ namespace 学生成绩管理系统
             this.Hide();
             new 学生端_课程信息().Show();
         }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new 学生端登录界面().Show();
+        }
     }
 }
