@@ -17,6 +17,8 @@ namespace 学生成绩管理系统
             InitializeComponent();
             toolStripLabel3.Text = LoadInfor.T_Sname;
             toolStripLabel2.Text = LoadInfor.T_Sno;
+            label7.Text = LoadInfor.T_Sname;
+            label8.Text = LoadInfor.T_Sno;
         }
 
         private void button1_Click(object sender, EventArgs e)
