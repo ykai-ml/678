@@ -133,5 +133,10 @@ namespace 学生成绩管理系统
                 }
             }
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
