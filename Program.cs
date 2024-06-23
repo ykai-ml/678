@@ -17,7 +17,6 @@ namespace 学生成绩管理系统
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-
         }
     }
 }

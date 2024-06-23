@@ -62,7 +62,7 @@ namespace 学生成绩管理系统
 
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             new 管理员登录界面().Show();
         }
 
@@ -108,12 +108,24 @@ namespace 学生成绩管理系统
         {
             using (SqlConnection con = new SqlConnection(strCon))
             {
+                if (!string.IsNullOrEmpty(textBox1.Text))
+                {
                 string strCmd = "select * from 学生$ where 学号={0}";
                 strCmd = string.Format(strCmd, textBox1.Text);
                 SqlDataAdapter da = new SqlDataAdapter(strCmd, con);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0].DefaultView;
+                }
+                else if (!string.IsNullOrEmpty(textBox2.Text))
+                {
+                    string strCmd = "select * from 学生$ where 班级号={0}";
+                    strCmd = string.Format(strCmd, textBox2.Text);
+                    SqlDataAdapter da = new SqlDataAdapter(strCmd, con);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    dataGridView1.DataSource = ds.Tables[0].DefaultView;
+                }
             }
         }
 
@@ -125,7 +137,7 @@ namespace 学生成绩管理系统
                 con.Open();
                 if (con.State == ConnectionState.Open)
                 {
-                    string strCmd = "update 学生$ set 姓名='{0}',班级号='{1}',密码={2},授权码={3} where 学号='{4}'";
+                    string strCmd = "update 学生$ set 姓名='{0}',班级号='{1}',密码='{2}',授权码='{3}' where 学号='{4}'";
                     strCmd = string.Format(strCmd, textBox3.Text, textBox2.Text, textBox4.Text,textBox5.Text, id);
                     SqlCommand command = new SqlCommand(strCmd, con);
                     command.ExecuteNonQuery();

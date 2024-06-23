@@ -58,7 +58,7 @@ namespace 学生成绩管理系统
 
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             new 管理员登录界面().Show();
         }
 

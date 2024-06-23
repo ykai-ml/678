@@ -58,7 +58,7 @@ namespace 学生成绩管理系统
 
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             new 管理员登录界面().Show();
         }
 
@@ -126,7 +126,7 @@ namespace 学生成绩管理系统
                 con.Open();
                 if (con.State == ConnectionState.Open)
                 {
-                    string strCmd = "update 教师表$ set 教师名='{0}',密码={1} where 教工号='{2}'";
+                    string strCmd = "update 教师表$ set 教师名='{0}',密码='{1}' where 教工号='{2}'";
                     strCmd = string.Format(strCmd, textBox3.Text, textBox4.Text, id);
                     SqlCommand command = new SqlCommand(strCmd, con);
                     command.ExecuteNonQuery();
