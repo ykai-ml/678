@@ -18,8 +18,8 @@ namespace 学生成绩管理系统
         public 管理员_课程列表()
         {
             InitializeComponent();
-            toolStripTextBox2.Text = LoadInfor.G_Sno;
-            toolStripTextBox1.Text = LoadInfor.G_Sname;
+            toolStripLabel2.Text = LoadInfor.G_Sno;
+            toolStripLabel3.Text = LoadInfor.G_Sname;
         }
         public void InitCourse()
         {
