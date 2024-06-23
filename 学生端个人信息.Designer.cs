@@ -69,7 +69,7 @@
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1067, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1067, 31);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -102,7 +102,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
             // menuStrip1
@@ -115,9 +115,9 @@
             this.综测ToolStripMenuItem,
             this.管理ToolStripMenuItem,
             this.课程信息ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 27);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 31);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(89, 535);
+            this.menuStrip1.Size = new System.Drawing.Size(91, 531);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -211,9 +211,9 @@
             this.label6.Location = new System.Drawing.Point(261, 411);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 15);
+            this.label6.Size = new System.Drawing.Size(37, 15);
             this.label6.TabIndex = 7;
-            this.label6.Text = "班级号";
+            this.label6.Text = "班级";
             // 
             // button1
             // 
@@ -227,20 +227,21 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(505, 66);
+            this.button2.Location = new System.Drawing.Point(539, 65);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 29);
             this.button2.TabIndex = 9;
             this.button2.Text = "修改头像";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(341, 46);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 62);
+            this.pictureBox1.Size = new System.Drawing.Size(156, 86);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 

@@ -26,17 +26,6 @@ namespace 学生成绩管理系统
             con.Open();
             if (con.State == ConnectionState.Open)
             {
-                LoadInfor.T_Sno = textBox1.Text;
-                string Name = "select * from 教师表$ where 教工号='{0}'";
-                Name = string.Format(Name, textBox1.Text.Trim());
-                SqlCommand command1 = new SqlCommand();
-                command1.Connection = con;
-                command1.CommandText = Name;
-                SqlDataReader reader = command1.ExecuteReader();
-                reader.Read();
-                LoadInfor.T_Sname = (string)reader["教师名"];
-                reader.Close();
-
                 string strCmd = "select * from 教师表$ where 教工号='{0}' and 密码='{1}'";
                 strCmd = string.Format(strCmd, textBox1.Text.Trim(), textBox2.Text.Trim());
                 SqlCommand command = new SqlCommand();
@@ -44,8 +33,21 @@ namespace 学生成绩管理系统
                 command.CommandText = strCmd;
                 SqlDataReader dr = command.ExecuteReader();
                 dr.Read();
+
                 if (dr.HasRows)
                 {
+                    dr.Close();
+                    LoadInfor.T_Sno = textBox1.Text;
+                    string Name = "select * from 教师表$ where 教工号='{0}'";
+                    Name = string.Format(Name, textBox1.Text.Trim());
+                    SqlCommand command1 = new SqlCommand();
+                    command1.Connection = con;
+                    command1.CommandText = Name;
+                    SqlDataReader reader = command1.ExecuteReader();
+                    reader.Read();
+                    LoadInfor.T_Sname = (string)reader["教师名"];
+                    reader.Close();
+
                     this.Hide();
                     //教师端窗口显示
                     new 教师端_成绩查询().Show();

@@ -16,5 +16,6 @@ namespace 学生成绩管理系统
 
         public static string X_Sno;
         public static string X_Sname;
+        public static string X_Class;
     }
 }
