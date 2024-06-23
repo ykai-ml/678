@@ -81,7 +81,7 @@ namespace 学生成绩管理系统
                 }
             }
         }
-
+        
         private void button2_Click(object sender, EventArgs e)//删除
         {
             string id = dataGridView1.CurrentRow.Cells["课程号"].Value.ToString();

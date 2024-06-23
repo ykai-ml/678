@@ -70,5 +70,15 @@ namespace 学生成绩管理系统
 
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 学生端个人信息_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

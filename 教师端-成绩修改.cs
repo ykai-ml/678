@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace 学生成绩管理系统
 {
     public partial class 教师端_成绩录入 : Form
     {
+        //SqlConnection Con = new SqlConnection(@"server=(local);database=学生成绩管理系统;Integrated security=true");
         public 教师端_成绩录入()
         {
             InitializeComponent();//初始化
@@ -87,6 +89,8 @@ namespace 学生成绩管理系统
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("该条信息保存成功！！");
                     Con.Close();
+                    populate();
+                    Reset();
                 }
                 catch (Exception Ex)
                 {
@@ -105,15 +109,122 @@ namespace 学生成绩管理系统
         {
 
         }
-
+        //修改
         private void button2_Click(object sender, EventArgs e)
         {
-
+            using (Con)
+            {
+               Con.Open();
+                string query = @"UPDATE 选课$
+                         SET 成绩 = @成绩
+                         WHERE 学号 = @学号 AND 课程号 = @课程号";
+                if (!string.IsNullOrEmpty(textBox1.Text) && !string.IsNullOrEmpty(textBox2.Text) && !string.IsNullOrEmpty(textBox3.Text))
+                {
+                    using (SqlCommand command = new SqlCommand(query, Con))
+                    {
+                        command.Parameters.AddWithValue("@学号", textBox1.Text);
+                        command.Parameters.AddWithValue("@课程号", textBox2.Text);
+                        command.Parameters.AddWithValue("@成绩", textBox3.Text);
+                        int rowsAffected = command.ExecuteNonQuery();
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("修改成功！");
+                            }
+                            else
+                            {
+                                MessageBox.Show("修改失败！");
+                            }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("请输入完整的学号、课程号和成绩！");
+                }
+            }
         }
 
+        private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                textBox1.Text = row.Cells["学号"].Value.ToString();
+                textBox2.Text = row.Cells["课程号"].Value.ToString();
+                textBox3.Text = row.Cells["成绩"].Value.ToString();
+            }
+        }
+
+        //删除
         private void button3_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(textBox1.Text) && !string.IsNullOrEmpty(textBox2.Text) && !string.IsNullOrEmpty(textBox3.Text))
+            {
+                
+                using (Con)
+                {
+                    Con.Open();
+                    string deleteCommand = "DELETE FROM 选课$ WHERE 学号=@学号 AND 课程号=@课程号 AND 成绩=@成绩";
+                    using (SqlCommand command = new SqlCommand(deleteCommand, Con))
+                    {
+                        command.Parameters.AddWithValue("@学号", textBox1.Text);
+                        command.Parameters.AddWithValue("@课程号", textBox2.Text);
+                        command.Parameters.AddWithValue("@成绩", textBox3.Text);
+                        int rowsAffected = command.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("删除成功");
+                            // 更新dataGridView的数据源
+                            // dataGridView.DataSource = GetUpdatedDataSource();
+                        }
+                        else
+                        {
+                            MessageBox.Show("未找到匹配的记录");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("请输入完整的学号、课程号和成绩");
+            }
+        }
+        //重置，清空输入框内容
+        
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Reset();
 
         }
+       
+        private void Reset()
+        {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+        }
+        //更新
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //populate();
+        }
+        int key = 0;
+
+        //将选中的行信息显示到三个文本框里
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+                textBox1.Text = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                textBox2.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                textBox3.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+                  if(textBox1.Text == "")
+                    {
+                         key = 0;
+                    }
+            else
+            {
+                key = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+            }
+        }
     }
-}
+            
+    }
+
