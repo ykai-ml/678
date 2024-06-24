@@ -91,7 +91,7 @@ namespace 学生成绩管理系统
                     {
                         con.Open();
                         string shzt2 = "未审核";
-                        string query = "insert into 综测 values('" + LoadInfor.X_Sno + "','" + LoadInfor.X_Class + "','" + null + "', '" + textBox2.Text + "','" + comboBox1.SelectedIndex.ToString() + "' , '" + textBox4.Text + "','" + shzt2 + "')";
+                        string query = "insert into 综测 values('" + LoadInfor.X_Sno + "','" + LoadInfor.X_Class + "','" + null + "', '" + textBox2.Text + "','" + comboBox1.Text + "' , '" + textBox4.Text + "','" + shzt2 + "')";
                         SqlCommand cmd = new SqlCommand(query, con);//cmd对象向数据库发送增删改查操作的sql语句
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("该条信息保存成功！！");
