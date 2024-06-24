@@ -60,6 +60,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>学生成绩管理系统DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="学生成绩管理系统DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>学生成绩管理系统DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="学生端-成绩查询.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +249,17 @@
     </None>
     <None Include="学生成绩管理系统DataSet.xss">
       <DependentUpon>学生成绩管理系统DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="学生成绩管理系统DataSet1.xsc">
+      <DependentUpon>学生成绩管理系统DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="学生成绩管理系统DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>学生成绩管理系统DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="学生成绩管理系统DataSet1.xss">
+      <DependentUpon>学生成绩管理系统DataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
