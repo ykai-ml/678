@@ -64,7 +64,7 @@ namespace 学生成绩管理系统
         private void 管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new 学生端_管理().Show();
+            new 学生端_管理登录().Show();
         }
 
         private void 课程信息ToolStripMenuItem_Click(object sender, EventArgs e)
