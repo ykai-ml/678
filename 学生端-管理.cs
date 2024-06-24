@@ -16,5 +16,10 @@ namespace 学生成绩管理系统
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

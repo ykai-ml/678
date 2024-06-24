@@ -101,5 +101,10 @@ namespace 学生成绩管理系统
         {
             InitStudent();
         }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
