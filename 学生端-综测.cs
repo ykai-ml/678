@@ -72,7 +72,7 @@ namespace 学生成绩管理系统
         private void Reset()
         {
             textBox2.Text = "";
-            textBox3.Text = "";
+            comboBox1.SelectedIndex =-1;
             textBox4.Text = "";
         }
 
@@ -81,7 +81,7 @@ namespace 学生成绩管理系统
         {
             using (SqlConnection con = new SqlConnection(Con))
               
-                if (textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || pictureBox1.Image != null)
+                if (textBox2.Text == "" ||comboBox1.SelectedIndex == -1 || textBox4.Text == "" || pictureBox1.Image != null)
                 {
                     MessageBox.Show("信息缺失！请检查条件是否完整！");
                 }
@@ -91,7 +91,7 @@ namespace 学生成绩管理系统
                     {
                         con.Open();
                         string shzt2 = "未审核";
-                        string query = "insert into 综测 values('" + LoadInfor.X_Sno + "','" + LoadInfor.X_Class + "','" + null + "', '" + textBox2.Text + "','" + textBox3.Text + "' , '" + textBox4.Text + "','" + shzt2 + "')";
+                        string query = "insert into 综测 values('" + LoadInfor.X_Sno + "','" + LoadInfor.X_Class + "','" + null + "', '" + textBox2.Text + "','" + comboBox1.SelectedIndex.ToString() + "' , '" + textBox4.Text + "','" + shzt2 + "')";
                         SqlCommand cmd = new SqlCommand(query, con);//cmd对象向数据库发送增删改查操作的sql语句
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("该条信息保存成功！！");
@@ -111,7 +111,7 @@ namespace 学生成绩管理系统
         private void button2_Click(object sender, EventArgs e)
         {
             
-                if (!string.IsNullOrEmpty(textBox2.Text) && !string.IsNullOrEmpty(textBox3.Text) && !string.IsNullOrEmpty(textBox4.Text))
+                if (!string.IsNullOrEmpty(textBox2.Text) && !string.IsNullOrEmpty(comboBox1.SelectedIndex.ToString()) && !string.IsNullOrEmpty(textBox4.Text))
                 {
 
                     using (SqlConnection con = new SqlConnection(Con))
@@ -122,7 +122,7 @@ namespace 学生成绩管理系统
                         {
                             command.Parameters.AddWithValue("@学号", LoadInfor.X_Sno);
                             command.Parameters.AddWithValue("@活动名称", textBox2.Text);
-                            command.Parameters.AddWithValue("@加分类型", textBox3.Text);
+                            command.Parameters.AddWithValue("@加分类型", comboBox1.SelectedIndex.ToString());
                             int rowsAffected = command.ExecuteNonQuery();
                             if (rowsAffected > 0)
                             {
@@ -151,14 +151,14 @@ namespace 学生成绩管理系统
                 string query = @"UPDATE 综测
                          SET  分值=@分值
                          WHERE 学号 = @学号 AND 活动名称 = @活动名称 AND 加分类型 =@加分类型";
-                if (!string.IsNullOrEmpty(textBox2.Text) && !string.IsNullOrEmpty(textBox3.Text) && !string.IsNullOrEmpty(textBox4.Text))
+                if (!string.IsNullOrEmpty(textBox2.Text) && !string.IsNullOrEmpty(comboBox1.SelectedIndex.ToString()) && !string.IsNullOrEmpty(textBox4.Text))
                 {
                     using (SqlCommand command = new SqlCommand(query, con))
                     {
                         command.Parameters.AddWithValue("@学号", LoadInfor.X_Sno);
 
                         command.Parameters.AddWithValue("@活动名称", textBox2.Text);
-                        command.Parameters.AddWithValue("@加分类型", textBox3.Text);
+                        command.Parameters.AddWithValue("@加分类型", comboBox1.SelectedIndex.ToString()     );
                         command.Parameters.AddWithValue("@分值", textBox4.Text);
                         int rowsAffected = command.ExecuteNonQuery();
                         if (rowsAffected > 0)

@@ -14,7 +14,7 @@ namespace 学生成绩管理系统
 {
     public partial class 学生端_管理登录 : Form
     {
-        string strCon = @"server=(local);database=学生成绩管理系统;Integrated security=true";
+        //string strCon = @"server=(local);database=学生成绩管理系统;Integrated security=true";
         public 学生端_管理登录()
         {
             InitializeComponent();
