@@ -53,15 +53,19 @@ namespace 学生成绩管理系统
         //底部显示表格
         private void populate()
         {
-            Con.Open();
-            string query = "select * from 综测";
-            SqlDataAdapter sda = new SqlDataAdapter(query, Con);//创建数据的批量抓取
-            SqlCommandBuilder builder = new SqlCommandBuilder(sda);//组合使用可用来批量处理数据库数据
-            //创建虚拟数据库
-            var ds = new DataSet();
-            sda.Fill(ds);
-            dataGridView1.DataSource = ds.Tables[0];
-            Con.Close();
+            using (Con)
+            {
+                Con.Open();
+                string query = "select * from 综测";
+                SqlDataAdapter sda = new SqlDataAdapter(query, Con);//创建数据的批量抓取
+                SqlCommandBuilder builder = new SqlCommandBuilder(sda);//组合使用可用来批量处理数据库数据
+                                                                       //创建虚拟数据库
+                var ds = new DataSet();
+                sda.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0];
+                Con.Close();
+            }
+                
         }
         private void Reset()
         {
@@ -97,10 +101,39 @@ namespace 学生成绩管理系统
                 
             }
         }
-
+        //删除
         private void button2_Click(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(textBox2.Text) && !string.IsNullOrEmpty(textBox3.Text) && !string.IsNullOrEmpty(textBox4.Text))
+            {
 
+                using (Con)
+                {
+                    Con.Open();
+                    string deleteCommand = "DELETE FROM 综测 WHERE 学号='" + LoadInfor.X_Sno + "' AND 活动名称=@活动名称 AND 加分类型=@加分类型";
+                    using (SqlCommand command = new SqlCommand(deleteCommand, Con))
+                    {
+                        command.Parameters.AddWithValue("@学号", LoadInfor.X_Sno);
+                        command.Parameters.AddWithValue("@活动名称", textBox2.Text);
+                        command.Parameters.AddWithValue("@加分类型", textBox3.Text);
+                        int rowsAffected = command.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("删除成功");
+                            // 更新dataGridView的数据源
+                            // dataGridView.DataSource = GetUpdatedDataSource();
+                        }
+                        else
+                        {
+                            MessageBox.Show("未找到匹配的记录");
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("请输入完整的学号、课程号和成绩");
+            }
         }
     }
 }
