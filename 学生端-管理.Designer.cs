@@ -41,10 +41,10 @@
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -59,11 +59,11 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.成绩查询ToolStripMenuItem,
+            this.课程信息ToolStripMenuItem,
             this.个人信息ToolStripMenuItem,
+            this.成绩查询ToolStripMenuItem,
             this.综测ToolStripMenuItem,
-            this.管理ToolStripMenuItem,
-            this.课程信息ToolStripMenuItem});
+            this.管理ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 27);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(89, 605);
@@ -98,7 +98,7 @@
             // 
             this.课程信息ToolStripMenuItem.Name = "课程信息ToolStripMenuItem";
             this.课程信息ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
-            this.课程信息ToolStripMenuItem.Text = "课程信息";
+            this.课程信息ToolStripMenuItem.Text = "守则";
             // 
             // toolStrip1
             // 
@@ -165,6 +165,17 @@
             this.splitContainer1.SplitterDistance = 130;
             this.splitContainer1.TabIndex = 17;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "审核通过",
+            "不通过"});
+            this.comboBox1.Location = new System.Drawing.Point(238, 42);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(190, 23);
+            this.comboBox1.TabIndex = 3;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
@@ -198,17 +209,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1051, 472);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "审核通过",
-            "不通过"});
-            this.comboBox1.Location = new System.Drawing.Point(238, 42);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(190, 23);
-            this.comboBox1.TabIndex = 3;
             // 
             // 学生端_管理
             // 

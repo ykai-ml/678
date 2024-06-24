@@ -110,11 +110,11 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.成绩查询ToolStripMenuItem,
+            this.课程信息ToolStripMenuItem,
             this.个人信息ToolStripMenuItem,
+            this.成绩查询ToolStripMenuItem,
             this.综测ToolStripMenuItem,
-            this.管理ToolStripMenuItem,
-            this.课程信息ToolStripMenuItem});
+            this.管理ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 27);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(89, 535);
@@ -152,7 +152,7 @@
             // 
             this.课程信息ToolStripMenuItem.Name = "课程信息ToolStripMenuItem";
             this.课程信息ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
-            this.课程信息ToolStripMenuItem.Text = "课程信息";
+            this.课程信息ToolStripMenuItem.Text = "守则";
             this.课程信息ToolStripMenuItem.Click += new System.EventHandler(this.课程信息ToolStripMenuItem_Click);
             // 
             // label1

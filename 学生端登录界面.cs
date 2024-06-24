@@ -60,7 +60,7 @@ namespace 学生成绩管理系统
 
                     this.Hide();
                     //学生端窗口显示
-                    new 学生端个人信息().Show();
+                    new 学生端_课程信息().Show();
                 }
                 else
                 {

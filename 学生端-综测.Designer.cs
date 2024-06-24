@@ -41,6 +41,7 @@
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -52,15 +53,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -68,49 +68,49 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.成绩查询ToolStripMenuItem,
+            this.课程信息ToolStripMenuItem,
             this.个人信息ToolStripMenuItem,
+            this.成绩查询ToolStripMenuItem,
             this.综测ToolStripMenuItem,
-            this.管理ToolStripMenuItem,
-            this.课程信息ToolStripMenuItem});
+            this.管理ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 31);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(91, 580);
+            this.menuStrip1.Size = new System.Drawing.Size(158, 580);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // 成绩查询ToolStripMenuItem
             // 
             this.成绩查询ToolStripMenuItem.Name = "成绩查询ToolStripMenuItem";
-            this.成绩查询ToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.成绩查询ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.成绩查询ToolStripMenuItem.Text = "成绩查询";
             this.成绩查询ToolStripMenuItem.Click += new System.EventHandler(this.成绩查询ToolStripMenuItem_Click);
             // 
             // 个人信息ToolStripMenuItem
             // 
             this.个人信息ToolStripMenuItem.Name = "个人信息ToolStripMenuItem";
-            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.个人信息ToolStripMenuItem.Text = "个人信息";
             this.个人信息ToolStripMenuItem.Click += new System.EventHandler(this.个人信息ToolStripMenuItem_Click);
             // 
             // 综测ToolStripMenuItem
             // 
             this.综测ToolStripMenuItem.Name = "综测ToolStripMenuItem";
-            this.综测ToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.综测ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.综测ToolStripMenuItem.Text = "综测";
             // 
             // 管理ToolStripMenuItem
             // 
             this.管理ToolStripMenuItem.Name = "管理ToolStripMenuItem";
-            this.管理ToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.管理ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.管理ToolStripMenuItem.Text = "管理";
             this.管理ToolStripMenuItem.Click += new System.EventHandler(this.管理ToolStripMenuItem_Click);
             // 
             // 课程信息ToolStripMenuItem
             // 
             this.课程信息ToolStripMenuItem.Name = "课程信息ToolStripMenuItem";
-            this.课程信息ToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
-            this.课程信息ToolStripMenuItem.Text = "课程信息";
+            this.课程信息ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.课程信息ToolStripMenuItem.Text = "守则";
             this.课程信息ToolStripMenuItem.Click += new System.EventHandler(this.课程信息ToolStripMenuItem_Click);
             // 
             // toolStrip1
@@ -166,7 +166,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(91, 31);
+            this.splitContainer1.Location = new System.Drawing.Point(158, 31);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -187,9 +187,17 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(946, 580);
+            this.splitContainer1.Size = new System.Drawing.Size(879, 580);
             this.splitContainer1.SplitterDistance = 143;
             this.splitContainer1.TabIndex = 13;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(534, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(125, 52);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
             // button3
             // 
@@ -285,16 +293,8 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(946, 433);
+            this.dataGridView1.Size = new System.Drawing.Size(879, 433);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(534, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 52);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
             // 
             // 学生端_综测
             // 
@@ -316,8 +316,8 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
