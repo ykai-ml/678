@@ -66,7 +66,7 @@
             this.课程信息ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 27);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(156, 423);
+            this.menuStrip1.Size = new System.Drawing.Size(89, 423);
             this.menuStrip1.TabIndex = 15;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -167,11 +167,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(616, 46);
+            this.button1.Location = new System.Drawing.Point(466, 42);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
-            this.button1.Text = "进入";
+            this.button1.Text = "修改";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox1
@@ -186,9 +186,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(125, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 15);
+            this.label1.Size = new System.Drawing.Size(37, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "授权码";
+            this.label1.Text = "状态";
             // 
             // dataGridView1
             // 
