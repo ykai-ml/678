@@ -135,6 +135,9 @@ namespace 学生成绩管理系统
                                 MessageBox.Show("未找到匹配的记录");
                             }
                         }
+                            con.Close();
+                            populate(); 
+                            Reset();
                     }
                 }
                 else
@@ -175,6 +178,9 @@ namespace 学生成绩管理系统
                 {
                     MessageBox.Show("请输入完整的信息！！");
                 }
+                con.Close();
+                populate();
+                Reset();
             }
         }
     }
