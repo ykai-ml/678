@@ -18,8 +18,9 @@ namespace 学生成绩管理系统
             InitializeComponent();
             toolStripTextBox1.Text = LoadInfor.X_Sname;
             toolStripTextBox2.Text = LoadInfor.X_Sno;
+            populate();
         }
-
+        string Con = @"server=(local);database=学生成绩管理系统;Integrated security=true"; 
         private void 成绩查询ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -49,21 +50,21 @@ namespace 学生成绩管理系统
             this.Hide();
             new 学生端登录界面().Show();
         }
-        SqlConnection Con = new SqlConnection(@"server=(local);database=学生成绩管理系统;Integrated security=true");
+        
         //底部显示表格
         private void populate()
         {
-            using (Con)
+            using (SqlConnection con = new SqlConnection(Con))
             {
-                Con.Open();
+                con.Open();
                 string query = "select * from 综测";
-                SqlDataAdapter sda = new SqlDataAdapter(query, Con);//创建数据的批量抓取
+                SqlDataAdapter sda = new SqlDataAdapter(query, con);//创建数据的批量抓取
                 SqlCommandBuilder builder = new SqlCommandBuilder(sda);//组合使用可用来批量处理数据库数据
                                                                        //创建虚拟数据库
                 var ds = new DataSet();
                 sda.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
-                Con.Close();
+                con.Close();
             }
                 
         }
@@ -73,67 +74,77 @@ namespace 学生成绩管理系统
             textBox3.Text = "";
             textBox4.Text = "";
         }
+
+        //修改
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || pictureBox1.Image != null)
-            {
-                MessageBox.Show("信息缺失！请检查条件是否完整！");
-            }
-            else
-            {
-                try
+            using (SqlConnection con = new SqlConnection(Con))
+              
+                if (textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || pictureBox1.Image != null)
                 {
-                    Con.Open();
-                    string shzt2 = "未审核";
-                    string query = "insert into 综测 values('" + LoadInfor.X_Sno + "','" + LoadInfor.X_Class + "','"+null+"', '" + textBox2.Text + "','" + textBox3.Text + "' , '" + textBox4.Text + "','" + shzt2 + "')";
-                    SqlCommand cmd = new SqlCommand(query, Con);//cmd对象向数据库发送增删改查操作的sql语句
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("该条信息保存成功！！");
-                    Con.Close();
-                    populate();
-                    Reset();
+                    MessageBox.Show("信息缺失！请检查条件是否完整！");
                 }
-                
-                catch (Exception Ex)
+                else
                 {
-                    MessageBox.Show(Ex.Message);
+                    try
+                    {
+                        con.Open();
+                        string shzt2 = "未审核";
+                        string query = "insert into 综测 values('" + LoadInfor.X_Sno + "','" + LoadInfor.X_Class + "','" + null + "', '" + textBox2.Text + "','" + textBox3.Text + "' , '" + textBox4.Text + "','" + shzt2 + "')";
+                        SqlCommand cmd = new SqlCommand(query, con);//cmd对象向数据库发送增删改查操作的sql语句
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("该条信息保存成功！！");
+                        con.Close();
+                        populate();
+                        Reset();
+                    }
+
+                    catch (Exception Ex)
+                    {
+                        MessageBox.Show(Ex.Message);
+                    }
+
                 }
-                
-            }
         }
         //删除
         private void button2_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(textBox2.Text) && !string.IsNullOrEmpty(textBox3.Text) && !string.IsNullOrEmpty(textBox4.Text))
-            {
-
-                using (Con)
+            
+                if (!string.IsNullOrEmpty(textBox2.Text) && !string.IsNullOrEmpty(textBox3.Text) && !string.IsNullOrEmpty(textBox4.Text))
                 {
-                    Con.Open();
-                    string deleteCommand = "DELETE FROM 综测 WHERE 学号='" + LoadInfor.X_Sno + "' AND 活动名称=@活动名称 AND 加分类型=@加分类型";
-                    using (SqlCommand command = new SqlCommand(deleteCommand, Con))
+
+                    using (SqlConnection con = new SqlConnection(Con))
                     {
-                        command.Parameters.AddWithValue("@学号", LoadInfor.X_Sno);
-                        command.Parameters.AddWithValue("@活动名称", textBox2.Text);
-                        command.Parameters.AddWithValue("@加分类型", textBox3.Text);
-                        int rowsAffected = command.ExecuteNonQuery();
-                        if (rowsAffected > 0)
+                        con.Open();
+                        string deleteCommand = "DELETE FROM 综测 WHERE 学号='" + LoadInfor.X_Sno + "' AND 活动名称=@活动名称 AND 加分类型=@加分类型";
+                        using (SqlCommand command = new SqlCommand(deleteCommand, con))
                         {
-                            MessageBox.Show("删除成功");
-                            // 更新dataGridView的数据源
-                            // dataGridView.DataSource = GetUpdatedDataSource();
-                        }
-                        else
-                        {
-                            MessageBox.Show("未找到匹配的记录");
+                            command.Parameters.AddWithValue("@学号", LoadInfor.X_Sno);
+                            command.Parameters.AddWithValue("@活动名称", textBox2.Text);
+                            command.Parameters.AddWithValue("@加分类型", textBox3.Text);
+                            int rowsAffected = command.ExecuteNonQuery();
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("删除成功");
+                                // 更新dataGridView的数据源
+                                // dataGridView.DataSource = GetUpdatedDataSource();
+                            }
+                            else
+                            {
+                                MessageBox.Show("未找到匹配的记录");
+                            }
                         }
                     }
                 }
-            }
-            else
-            {
-                MessageBox.Show("请输入完整的学号、课程号和成绩");
-            }
+                else
+                {
+                    MessageBox.Show("请输入完整的信息！！！");
+                }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
