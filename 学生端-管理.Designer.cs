@@ -42,9 +42,9 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -66,38 +66,38 @@
             this.课程信息ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 27);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(89, 423);
+            this.menuStrip1.Size = new System.Drawing.Size(89, 605);
             this.menuStrip1.TabIndex = 15;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // 成绩查询ToolStripMenuItem
             // 
             this.成绩查询ToolStripMenuItem.Name = "成绩查询ToolStripMenuItem";
-            this.成绩查询ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.成绩查询ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.成绩查询ToolStripMenuItem.Text = "成绩查询";
             // 
             // 个人信息ToolStripMenuItem
             // 
             this.个人信息ToolStripMenuItem.Name = "个人信息ToolStripMenuItem";
-            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.个人信息ToolStripMenuItem.Text = "个人信息";
             // 
             // 综测ToolStripMenuItem
             // 
             this.综测ToolStripMenuItem.Name = "综测ToolStripMenuItem";
-            this.综测ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.综测ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.综测ToolStripMenuItem.Text = "综测";
             // 
             // 管理ToolStripMenuItem
             // 
             this.管理ToolStripMenuItem.Name = "管理ToolStripMenuItem";
-            this.管理ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.管理ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.管理ToolStripMenuItem.Text = "管理";
             // 
             // 课程信息ToolStripMenuItem
             // 
             this.课程信息ToolStripMenuItem.Name = "课程信息ToolStripMenuItem";
-            this.课程信息ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.课程信息ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.课程信息ToolStripMenuItem.Text = "课程信息";
             // 
             // toolStrip1
@@ -110,7 +110,7 @@
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1155, 27);
             this.toolStrip1.TabIndex = 16;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -154,38 +154,33 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.comboBox1);
             this.splitContainer1.Panel1.Controls.Add(this.button1);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox1);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 93;
+            this.splitContainer1.Size = new System.Drawing.Size(1155, 632);
+            this.splitContainer1.SplitterDistance = 130;
             this.splitContainer1.TabIndex = 17;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(466, 42);
+            this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(529, 45);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(77, 32);
             this.button1.TabIndex = 2;
             this.button1.Text = "修改";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(183, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 25);
-            this.textBox1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(125, 45);
+            this.label1.Location = new System.Drawing.Point(195, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 15);
             this.label1.TabIndex = 0;
@@ -193,25 +188,40 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(92, 14);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 353);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(1051, 472);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "审核通过",
+            "不通过"});
+            this.comboBox1.Location = new System.Drawing.Point(238, 42);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(190, 23);
+            this.comboBox1.TabIndex = 3;
             // 
             // 学生端_管理
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1155, 632);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.splitContainer1);
             this.Name = "学生端_管理";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "学生端_管理";
+            this.Load += new System.EventHandler(this.学生端_管理_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -242,8 +252,8 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
