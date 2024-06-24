@@ -82,34 +82,34 @@
             // 课程信息ToolStripMenuItem
             // 
             this.课程信息ToolStripMenuItem.Name = "课程信息ToolStripMenuItem";
-            this.课程信息ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.课程信息ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.课程信息ToolStripMenuItem.Text = "守则";
             this.课程信息ToolStripMenuItem.Click += new System.EventHandler(this.课程信息ToolStripMenuItem_Click);
             // 
             // 个人信息ToolStripMenuItem
             // 
             this.个人信息ToolStripMenuItem.Name = "个人信息ToolStripMenuItem";
-            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.个人信息ToolStripMenuItem.Text = "个人信息";
             this.个人信息ToolStripMenuItem.Click += new System.EventHandler(this.个人信息ToolStripMenuItem_Click);
             // 
             // 成绩查询ToolStripMenuItem
             // 
             this.成绩查询ToolStripMenuItem.Name = "成绩查询ToolStripMenuItem";
-            this.成绩查询ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.成绩查询ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.成绩查询ToolStripMenuItem.Text = "成绩查询";
             this.成绩查询ToolStripMenuItem.Click += new System.EventHandler(this.成绩查询ToolStripMenuItem_Click);
             // 
             // 综测ToolStripMenuItem
             // 
             this.综测ToolStripMenuItem.Name = "综测ToolStripMenuItem";
-            this.综测ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.综测ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.综测ToolStripMenuItem.Text = "综测";
             // 
             // 管理ToolStripMenuItem
             // 
             this.管理ToolStripMenuItem.Name = "管理ToolStripMenuItem";
-            this.管理ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.管理ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.管理ToolStripMenuItem.Text = "管理";
             this.管理ToolStripMenuItem.Click += new System.EventHandler(this.管理ToolStripMenuItem_Click);
             // 
