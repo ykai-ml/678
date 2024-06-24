@@ -67,6 +67,12 @@
     <Compile Include="学生端-管理.Designer.cs">
       <DependentUpon>学生端-管理.cs</DependentUpon>
     </Compile>
+    <Compile Include="学生端-管理登录.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="学生端-管理登录.Designer.cs">
+      <DependentUpon>学生端-管理登录.cs</DependentUpon>
+    </Compile>
     <Compile Include="学生端-综测.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="学生端-管理.resx">
       <DependentUpon>学生端-管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="学生端-管理登录.resx">
+      <DependentUpon>学生端-管理登录.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="学生端-综测.resx">
       <DependentUpon>学生端-综测.cs</DependentUpon>
