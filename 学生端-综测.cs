@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace 学生成绩管理系统
 {
@@ -141,10 +142,40 @@ namespace 学生成绩管理系统
                     MessageBox.Show("请输入完整的信息！！！");
                 }
         }
-
+        //修改
         private void button3_Click(object sender, EventArgs e)
         {
+            using (SqlConnection con = new SqlConnection(Con))
+            {
+                con.Open();
+                string query = @"UPDATE 综测
+                         SET  分值=@分值
+                         WHERE 学号 = @学号 AND 活动名称 = @活动名称 AND 加分类型 =@加分类型";
+                if (!string.IsNullOrEmpty(textBox2.Text) && !string.IsNullOrEmpty(textBox3.Text) && !string.IsNullOrEmpty(textBox4.Text))
+                {
+                    using (SqlCommand command = new SqlCommand(query, con))
+                    {
+                        command.Parameters.AddWithValue("@学号", LoadInfor.X_Sno);
 
+                        command.Parameters.AddWithValue("@活动名称", textBox2.Text);
+                        command.Parameters.AddWithValue("@加分类型", textBox3.Text);
+                        command.Parameters.AddWithValue("@分值", textBox4.Text);
+                        int rowsAffected = command.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("修改成功！");
+                        }
+                        else
+                        {
+                            MessageBox.Show("修改失败！");
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("请输入完整的信息！！");
+                }
+            }
         }
     }
 }
