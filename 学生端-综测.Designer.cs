@@ -37,10 +37,9 @@
             this.管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -52,7 +51,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -82,34 +82,34 @@
             // 课程信息ToolStripMenuItem
             // 
             this.课程信息ToolStripMenuItem.Name = "课程信息ToolStripMenuItem";
-            this.课程信息ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.课程信息ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.课程信息ToolStripMenuItem.Text = "守则";
             this.课程信息ToolStripMenuItem.Click += new System.EventHandler(this.课程信息ToolStripMenuItem_Click);
             // 
             // 个人信息ToolStripMenuItem
             // 
             this.个人信息ToolStripMenuItem.Name = "个人信息ToolStripMenuItem";
-            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.个人信息ToolStripMenuItem.Text = "个人信息";
             this.个人信息ToolStripMenuItem.Click += new System.EventHandler(this.个人信息ToolStripMenuItem_Click);
             // 
             // 成绩查询ToolStripMenuItem
             // 
             this.成绩查询ToolStripMenuItem.Name = "成绩查询ToolStripMenuItem";
-            this.成绩查询ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.成绩查询ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.成绩查询ToolStripMenuItem.Text = "成绩查询";
             this.成绩查询ToolStripMenuItem.Click += new System.EventHandler(this.成绩查询ToolStripMenuItem_Click);
             // 
             // 综测ToolStripMenuItem
             // 
             this.综测ToolStripMenuItem.Name = "综测ToolStripMenuItem";
-            this.综测ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.综测ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.综测ToolStripMenuItem.Text = "综测";
             // 
             // 管理ToolStripMenuItem
             // 
             this.管理ToolStripMenuItem.Name = "管理ToolStripMenuItem";
-            this.管理ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.管理ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.管理ToolStripMenuItem.Text = "管理";
             this.管理ToolStripMenuItem.Click += new System.EventHandler(this.管理ToolStripMenuItem_Click);
             // 
@@ -118,8 +118,8 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
-            this.toolStripTextBox2,
-            this.toolStripTextBox1,
+            this.toolStripLabel2,
+            this.toolStripLabel3,
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -134,24 +134,6 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(69, 24);
             this.toolStripLabel1.Text = "退出账号";
             this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
-            // 
-            // toolStripTextBox2
-            // 
-            this.toolStripTextBox2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripTextBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
-            this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 27);
-            this.toolStripTextBox2.Text = "Sno";
-            this.toolStripTextBox2.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 27);
-            this.toolStripTextBox1.Text = "NAME";
-            this.toolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // toolStripButton1
             // 
@@ -190,6 +172,18 @@
             this.splitContainer1.Size = new System.Drawing.Size(948, 584);
             this.splitContainer1.SplitterDistance = 143;
             this.splitContainer1.TabIndex = 13;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "智育",
+            "德育",
+            "美育"});
+            this.comboBox1.Location = new System.Drawing.Point(353, 39);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 14;
             // 
             // pictureBox1
             // 
@@ -292,17 +286,19 @@
             this.dataGridView1.Size = new System.Drawing.Size(948, 437);
             this.dataGridView1.TabIndex = 0;
             // 
-            // comboBox1
+            // toolStripLabel2
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "智育",
-            "德育",
-            "美育"});
-            this.comboBox1.Location = new System.Drawing.Point(353, 39);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 14;
+            this.toolStripLabel2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(122, 24);
+            this.toolStripLabel2.Text = "toolStripLabel2";
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(122, 24);
+            this.toolStripLabel3.Text = "toolStripLabel3";
             // 
             // 学生端_综测
             // 
@@ -341,8 +337,6 @@
         private System.Windows.Forms.ToolStripMenuItem 课程信息ToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -357,5 +351,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
     }
 }

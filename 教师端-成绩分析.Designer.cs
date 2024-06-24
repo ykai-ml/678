@@ -44,9 +44,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -72,27 +72,27 @@
             // 成绩查询ToolStripMenuItem
             // 
             this.成绩查询ToolStripMenuItem.Name = "成绩查询ToolStripMenuItem";
-            this.成绩查询ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.成绩查询ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.成绩查询ToolStripMenuItem.Text = "成绩查询";
             this.成绩查询ToolStripMenuItem.Click += new System.EventHandler(this.成绩查询ToolStripMenuItem_Click);
             // 
             // 成绩录入ToolStripMenuItem
             // 
             this.成绩录入ToolStripMenuItem.Name = "成绩录入ToolStripMenuItem";
-            this.成绩录入ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.成绩录入ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.成绩录入ToolStripMenuItem.Text = "成绩修改";
             this.成绩录入ToolStripMenuItem.Click += new System.EventHandler(this.成绩录入ToolStripMenuItem_Click);
             // 
             // 成绩分析ToolStripMenuItem
             // 
             this.成绩分析ToolStripMenuItem.Name = "成绩分析ToolStripMenuItem";
-            this.成绩分析ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.成绩分析ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.成绩分析ToolStripMenuItem.Text = "成绩分析";
             // 
             // 个人信息ToolStripMenuItem
             // 
             this.个人信息ToolStripMenuItem.Name = "个人信息ToolStripMenuItem";
-            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.个人信息ToolStripMenuItem.Text = "个人信息";
             this.个人信息ToolStripMenuItem.Click += new System.EventHandler(this.个人信息ToolStripMenuItem_Click);
             // 
@@ -184,8 +184,8 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
-            this.toolStripTextBox2,
-            this.toolStripTextBox1,
+            this.toolStripLabel2,
+            this.toolStripLabel3,
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -197,27 +197,9 @@
             // 
             this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(69, 28);
+            this.toolStripLabel1.Size = new System.Drawing.Size(69, 24);
             this.toolStripLabel1.Text = "退出账号";
             this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
-            // 
-            // toolStripTextBox2
-            // 
-            this.toolStripTextBox2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripTextBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
-            this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 31);
-            this.toolStripTextBox2.Text = "Sno";
-            this.toolStripTextBox2.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 31);
-            this.toolStripTextBox1.Text = "NAME";
-            this.toolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // toolStripButton1
             // 
@@ -228,6 +210,20 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
             this.toolStripButton1.Text = "toolStripButton1";
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(122, 24);
+            this.toolStripLabel2.Text = "toolStripLabel2";
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(122, 24);
+            this.toolStripLabel3.Text = "toolStripLabel3";
             // 
             // 教师端_成绩分析
             // 
@@ -263,8 +259,6 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox2;
@@ -273,5 +267,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
     }
 }

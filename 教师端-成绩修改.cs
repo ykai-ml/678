@@ -18,8 +18,8 @@ namespace 学生成绩管理系统
         public 教师端_成绩录入()
         {
             InitializeComponent();//初始化
-            toolStripTextBox1.Text = LoadInfor.T_Sname;
-            toolStripTextBox2.Text = LoadInfor.T_Sno;
+            toolStripLabel3.Text = LoadInfor.T_Sname;
+            toolStripLabel1.Text = LoadInfor.T_Sno;
             populate();//将函数写入
         }
         

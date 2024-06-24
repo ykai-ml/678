@@ -19,8 +19,8 @@ namespace 学生成绩管理系统
         public 教师端_成绩查询()
         {
             InitializeComponent();
-            toolStripTextBox1.Text = LoadInfor.T_Sname;
-            toolStripTextBox2.Text = LoadInfor.T_Sno;
+            toolStripLabel3.Text = LoadInfor.T_Sname;
+            toolStripLabel2.Text = LoadInfor.T_Sno;
             
         }
         string strCon = @"server=(local);database=学生成绩管理系统;Integrated security=true";
