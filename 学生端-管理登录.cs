@@ -54,10 +54,24 @@ namespace 学生成绩管理系统
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection(strCon))
+
+        }
+
+        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string strCon = @"server=(local);database=学生成绩管理系统;Integrated security=true";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = strCon;
+            con.Open();
+            if (con.State == ConnectionState.Open)
             {
-                string strCmd = "select * from 学生$,综测 where 学生$.学号=综测.学号 and 学生$.学号='{0}' and 授权码='{1}'";
-                strCmd = string.Format(strCmd, LoadInfor.X_Sno,textBox1.Text.Trim());
+                string strCmd = "select * from 学生$ where 学号='{0}' and 授权码='{1}'";
+                strCmd = string.Format(strCmd, LoadInfor.X_Sno, textBox1.Text.Trim());
                 SqlCommand command = new SqlCommand();
                 command.Connection = con;
                 command.CommandText = strCmd;
@@ -66,10 +80,19 @@ namespace 学生成绩管理系统
 
                 if (dr.HasRows)
                 {
-                    dr.Close();
-
+                    this.Close();
+                    new 学生端_管理().Show();
+                }
+                else
+                {
+                    MessageBox.Show("授权码不正确或你无权进入");
                 }
             }
+            else
+            {
+                MessageBox.Show("授权码不正确或你无权进入");
+            }
+        
         }
     }
 }
