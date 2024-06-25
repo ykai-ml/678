@@ -24,7 +24,8 @@ namespace 学生成绩管理系统
         }
         private void ConnectToDatabase()
         {
-            string connectionString = "server=(local);database=学生成绩管理系统;Integrated security=true";
+            //string connectionString = "server=(local);database=学生成绩管理系统;Integrated security=true";
+            string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\学生成绩管理系统.mdf;Integrated Security=True;Connect Timeout=30";
             connection = new SqlConnection(connectionString);
             connection.Open();
         }

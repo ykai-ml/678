@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace 学生成绩管理系统
 {
-    public partial class 学生端_课程信息 : Form
+    public partial class 学生端_守则 : Form
     {
-        public 学生端_课程信息()
+        public 学生端_守则()
         {
             InitializeComponent();
             toolStripLabel3.Text = LoadInfor.X_Sname;
