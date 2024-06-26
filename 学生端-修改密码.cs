@@ -20,13 +20,13 @@ namespace 学生成绩管理系统
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            /*
+            
             // 1. 从textBox1中获取新密码
             string newPassword = textBox1.Text;
 
             // 2. 使用ADO.NET连接数据库
-            string connectionString = "Data Source=(local);Initial Catalog=学生成绩管理系统；Integrated Security=True";
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            string strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\学生成绩管理系统.mdf;Integrated Security=True;Connect Timeout=30";
+            using (SqlConnection connection = new SqlConnection(strCon))
             {
                 // 3. 编写SQL语句，用于更新学生表中的密码
                 string updateSql = "UPDATE 学生$ SET 密码 = @新密码 WHERE 学号 = @学号";
@@ -57,8 +57,6 @@ namespace 学生成绩管理系统
             }
         }
 
-        */
-        }
         private void label3_Click(object sender, EventArgs e)
         {
 
