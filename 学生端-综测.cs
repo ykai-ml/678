@@ -21,7 +21,7 @@ namespace 学生成绩管理系统
             toolStripLabel2.Text = LoadInfor.X_Sno;
             populate();
         }
-        string Con = @"server=(local);database=学生成绩管理系统;Integrated security=true"; 
+        string Con = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\学生成绩管理系统.mdf;Integrated Security=True;Connect Timeout=30";
         private void 成绩查询ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -43,7 +43,7 @@ namespace 学生成绩管理系统
         private void 课程信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new 学生端_课程信息().Show();
+            new 学生端_守则().Show();
         }
 
         private void toolStripLabel1_Click(object sender, EventArgs e)

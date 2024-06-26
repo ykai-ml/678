@@ -23,7 +23,7 @@ namespace 学生成绩管理系统
             populate();//将函数写入
         }
         
-        SqlConnection Con = new SqlConnection(@"server=(local);database=学生成绩管理系统;Integrated security=true");
+        SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\学生成绩管理系统.mdf;Integrated Security=True;Connect Timeout=30");
         //底部显示表格
         private void populate()
         {

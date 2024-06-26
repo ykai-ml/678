@@ -14,7 +14,7 @@ namespace 学生成绩管理系统
 {
     public partial class 管理员_教师列表 : Form
     {
-        string strCon = @"server=(local);database=学生成绩管理系统;Integrated security=true";
+        string strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\学生成绩管理系统.mdf;Integrated Security=True;Connect Timeout=30";
         public 管理员_教师列表()
         {
             InitializeComponent();
@@ -133,6 +133,12 @@ namespace 学生成绩管理系统
                     InitTeacher();
                 }
             }
+        }
+
+        private void 通知发布ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new 管理员_通知发布().Show();
         }
     }
 }

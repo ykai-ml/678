@@ -20,7 +20,7 @@ namespace 学生成绩管理系统
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string strCon = @"server=(local);database=学生成绩管理系统;Integrated security=true";
+            string strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\学生成绩管理系统.mdf;Integrated Security=True;Connect Timeout=30";
             SqlConnection con = new SqlConnection();
             con.ConnectionString = strCon;
             con.Open();
@@ -60,7 +60,7 @@ namespace 学生成绩管理系统
 
                     this.Hide();
                     //学生端窗口显示
-                    new 学生端_课程信息().Show();
+                    new 学生端_守则().Show();
                 }
                 else
                 {

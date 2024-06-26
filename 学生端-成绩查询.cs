@@ -14,7 +14,7 @@ namespace 学生成绩管理系统
 {
     public partial class 学生端_成绩查询 : Form
     {
-        string strCon = @"server=(local);database=学生成绩管理系统;Integrated security=true";
+        string strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\学生成绩管理系统.mdf;Integrated Security=True;Connect Timeout=30";
         public 学生端_成绩查询()
         {
             InitializeComponent();
@@ -70,7 +70,7 @@ namespace 学生成绩管理系统
         private void 课程信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new 学生端_课程信息().Show();
+            new 学生端_守则().Show();
         }
 
         private void toolStripLabel1_Click(object sender, EventArgs e)

@@ -44,6 +44,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.通知发布ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -61,34 +62,35 @@
             // 班级列表ToolStripMenuItem
             // 
             this.班级列表ToolStripMenuItem.Name = "班级列表ToolStripMenuItem";
-            this.班级列表ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.班级列表ToolStripMenuItem.Size = new System.Drawing.Size(115, 21);
             this.班级列表ToolStripMenuItem.Text = "班级列表";
             // 
             // 学生列表ToolStripMenuItem
             // 
             this.学生列表ToolStripMenuItem.Name = "学生列表ToolStripMenuItem";
-            this.学生列表ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.学生列表ToolStripMenuItem.Size = new System.Drawing.Size(115, 21);
             this.学生列表ToolStripMenuItem.Text = "学生列表";
             this.学生列表ToolStripMenuItem.Click += new System.EventHandler(this.学生列表ToolStripMenuItem_Click);
             // 
             // 教师列表ToolStripMenuItem
             // 
             this.教师列表ToolStripMenuItem.Name = "教师列表ToolStripMenuItem";
-            this.教师列表ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.教师列表ToolStripMenuItem.Size = new System.Drawing.Size(115, 21);
             this.教师列表ToolStripMenuItem.Text = "教师列表";
             this.教师列表ToolStripMenuItem.Click += new System.EventHandler(this.教师列表ToolStripMenuItem_Click);
             // 
             // 课程列表ToolStripMenuItem
             // 
             this.课程列表ToolStripMenuItem.Name = "课程列表ToolStripMenuItem";
-            this.课程列表ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.课程列表ToolStripMenuItem.Size = new System.Drawing.Size(115, 21);
             this.课程列表ToolStripMenuItem.Text = "课程列表";
             this.课程列表ToolStripMenuItem.Click += new System.EventHandler(this.课程列表ToolStripMenuItem_Click);
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(89, 27);
+            this.splitContainer1.Location = new System.Drawing.Point(124, 27);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -107,17 +109,19 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(948, 569);
-            this.splitContainer1.SplitterDistance = 132;
+            this.splitContainer1.Size = new System.Drawing.Size(654, 450);
+            this.splitContainer1.SplitterDistance = 104;
+            this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 23;
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(710, 79);
+            this.button4.Location = new System.Drawing.Point(532, 63);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(95, 37);
+            this.button4.Size = new System.Drawing.Size(71, 30);
             this.button4.TabIndex = 26;
             this.button4.Text = "修改";
             this.button4.UseVisualStyleBackColor = false;
@@ -127,9 +131,10 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(510, 79);
+            this.button3.Location = new System.Drawing.Point(382, 63);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 38);
+            this.button3.Size = new System.Drawing.Size(71, 30);
             this.button3.TabIndex = 25;
             this.button3.Text = "查找";
             this.button3.UseVisualStyleBackColor = false;
@@ -138,32 +143,36 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(103, 36);
+            this.label6.Location = new System.Drawing.Point(77, 29);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 15);
+            this.label6.Size = new System.Drawing.Size(41, 12);
             this.label6.TabIndex = 19;
             this.label6.Text = "班级号";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(525, 33);
+            this.textBox3.Location = new System.Drawing.Point(394, 26);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(171, 25);
+            this.textBox3.Size = new System.Drawing.Size(129, 21);
             this.textBox3.TabIndex = 16;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(161, 33);
+            this.textBox1.Location = new System.Drawing.Point(121, 26);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 25);
+            this.textBox1.Size = new System.Drawing.Size(122, 21);
             this.textBox1.TabIndex = 13;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(467, 36);
+            this.label1.Location = new System.Drawing.Point(350, 29);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 15);
+            this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 9;
             this.label1.Text = "班级名";
             // 
@@ -171,9 +180,10 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(306, 79);
+            this.button2.Location = new System.Drawing.Point(230, 63);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 38);
+            this.button2.Size = new System.Drawing.Size(71, 30);
             this.button2.TabIndex = 8;
             this.button2.Text = "删除";
             this.button2.UseVisualStyleBackColor = false;
@@ -183,9 +193,10 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.HotTrack;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(104, 79);
+            this.button1.Location = new System.Drawing.Point(78, 63);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 38);
+            this.button1.Size = new System.Drawing.Size(71, 30);
             this.button1.TabIndex = 8;
             this.button1.Text = "录入";
             this.button1.UseVisualStyleBackColor = false;
@@ -197,10 +208,11 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(948, 433);
+            this.dataGridView1.Size = new System.Drawing.Size(654, 343);
             this.dataGridView1.TabIndex = 0;
             // 
             // menuStrip1
@@ -208,15 +220,24 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.通知发布ToolStripMenuItem,
             this.学生列表ToolStripMenuItem,
             this.教师列表ToolStripMenuItem,
             this.课程列表ToolStripMenuItem,
             this.班级列表ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 27);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(89, 569);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(124, 450);
             this.menuStrip1.TabIndex = 21;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // 通知发布ToolStripMenuItem
+            // 
+            this.通知发布ToolStripMenuItem.Name = "通知发布ToolStripMenuItem";
+            this.通知发布ToolStripMenuItem.Size = new System.Drawing.Size(115, 21);
+            this.通知发布ToolStripMenuItem.Text = "通知发布";
+            this.通知发布ToolStripMenuItem.Click += new System.EventHandler(this.通知发布ToolStripMenuItem_Click);
             // 
             // toolStripButton1
             // 
@@ -225,7 +246,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Linen;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton1.Text = "toolStripButton1";
             // 
             // toolStrip1
@@ -238,7 +259,7 @@
             this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1037, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(778, 27);
             this.toolStrip1.TabIndex = 22;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -246,7 +267,7 @@
             // 
             this.toolStripLabel1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(69, 24);
+            this.toolStripLabel1.Size = new System.Drawing.Size(56, 24);
             this.toolStripLabel1.Text = "退出账号";
             this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
@@ -254,24 +275,25 @@
             // 
             this.toolStripLabel2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(122, 24);
+            this.toolStripLabel2.Size = new System.Drawing.Size(96, 24);
             this.toolStripLabel2.Text = "toolStripLabel2";
             // 
             // toolStripLabel3
             // 
             this.toolStripLabel3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(122, 24);
+            this.toolStripLabel3.Size = new System.Drawing.Size(96, 24);
             this.toolStripLabel3.Text = "toolStripLabel3";
             // 
             // 管理员_班级列表
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1037, 596);
+            this.ClientSize = new System.Drawing.Size(778, 477);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.toolStrip1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "管理员_班级列表";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "管理员_班级列表";
@@ -313,5 +335,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
+        private System.Windows.Forms.ToolStripMenuItem 通知发布ToolStripMenuItem;
     }
 }
