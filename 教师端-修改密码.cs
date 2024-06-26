@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace 学生成绩管理系统
 {
-    public partial class 修改密码 : Form
+    public partial class 教师端_修改密码 : Form
     {
-        public 修改密码()
+        public 教师端_修改密码()
         {
             InitializeComponent();
         }

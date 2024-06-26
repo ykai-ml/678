@@ -83,6 +83,12 @@ namespace 学生成绩管理系统
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            //new 学生端-修改密码().Show();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
 
         }
     }
