@@ -44,7 +44,7 @@ namespace 学生成绩管理系统
         private void 课程信息ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new 学生端_课程信息().Show();
+            new 学生端_守则().Show();
         }
 
         private void toolStripLabel1_Click(object sender, EventArgs e)
@@ -79,6 +79,11 @@ namespace 学生成绩管理系统
         private void 学生端个人信息_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

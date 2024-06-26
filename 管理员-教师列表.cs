@@ -14,7 +14,7 @@ namespace 学生成绩管理系统
 {
     public partial class 管理员_教师列表 : Form
     {
-        string strCon = @"server=(local);database=学生成绩管理系统;Integrated security=true";
+        string strCon = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\学生成绩管理系统.mdf;Integrated Security=True;Connect Timeout=30";
         public 管理员_教师列表()
         {
             InitializeComponent();
