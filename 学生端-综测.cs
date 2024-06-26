@@ -58,7 +58,9 @@ namespace 学生成绩管理系统
             using (SqlConnection con = new SqlConnection(Con))
             {
                 con.Open();
-                string query = "select * from 综测";
+                string query = "select * from 综测 where 学号='" + LoadInfor.X_Sno + "'";
+
+                //string query = "select * from 综测";
                 SqlDataAdapter sda = new SqlDataAdapter(query, con);//创建数据的批量抓取
                 SqlCommandBuilder builder = new SqlCommandBuilder(sda);//组合使用可用来批量处理数据库数据
                                                                        //创建虚拟数据库
@@ -67,7 +69,7 @@ namespace 学生成绩管理系统
                 dataGridView1.DataSource = ds.Tables[0];
                 con.Close();
             }
-                
+                 
         }
         private void Reset()
         {

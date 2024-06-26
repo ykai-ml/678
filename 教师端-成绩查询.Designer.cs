@@ -75,27 +75,27 @@
             // 成绩查询ToolStripMenuItem
             // 
             this.成绩查询ToolStripMenuItem.Name = "成绩查询ToolStripMenuItem";
-            this.成绩查询ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.成绩查询ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.成绩查询ToolStripMenuItem.Text = "成绩查询";
             // 
             // 成绩录入ToolStripMenuItem
             // 
             this.成绩录入ToolStripMenuItem.Name = "成绩录入ToolStripMenuItem";
-            this.成绩录入ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.成绩录入ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.成绩录入ToolStripMenuItem.Text = "成绩修改";
             this.成绩录入ToolStripMenuItem.Click += new System.EventHandler(this.成绩录入ToolStripMenuItem_Click);
             // 
             // 成绩分析ToolStripMenuItem
             // 
             this.成绩分析ToolStripMenuItem.Name = "成绩分析ToolStripMenuItem";
-            this.成绩分析ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.成绩分析ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.成绩分析ToolStripMenuItem.Text = "成绩分析";
             this.成绩分析ToolStripMenuItem.Click += new System.EventHandler(this.成绩分析ToolStripMenuItem_Click);
             // 
             // 个人信息ToolStripMenuItem
             // 
             this.个人信息ToolStripMenuItem.Name = "个人信息ToolStripMenuItem";
-            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
             this.个人信息ToolStripMenuItem.Text = "个人信息";
             this.个人信息ToolStripMenuItem.Click += new System.EventHandler(this.个人信息ToolStripMenuItem_Click);
             // 

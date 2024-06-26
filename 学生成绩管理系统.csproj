@@ -58,6 +58,12 @@
     <Compile Include="LoadInfor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="学生端-修改密码.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="学生端-修改密码.Designer.cs">
+      <DependentUpon>学生端-修改密码.cs</DependentUpon>
+    </Compile>
     <Compile Include="学生端-成绩查询.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,12 @@
     </Compile>
     <Compile Include="教师端-个人信息.Designer.cs">
       <DependentUpon>教师端-个人信息.cs</DependentUpon>
+    </Compile>
+    <Compile Include="教师端-修改密码.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="教师端-修改密码.Designer.cs">
+      <DependentUpon>教师端-修改密码.cs</DependentUpon>
     </Compile>
     <Compile Include="教师端-成绩分析.cs">
       <SubType>Form</SubType>
@@ -178,6 +190,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="学生端-修改密码.resx">
+      <DependentUpon>学生端-修改密码.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="学生端-成绩查询.resx">
       <DependentUpon>学生端-成绩查询.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="教师端-个人信息.resx">
       <DependentUpon>教师端-个人信息.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="教师端-修改密码.resx">
+      <DependentUpon>教师端-修改密码.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="教师端-成绩分析.resx">
       <DependentUpon>教师端-成绩分析.cs</DependentUpon>

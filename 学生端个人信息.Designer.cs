@@ -35,11 +35,11 @@
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.成绩查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.课程信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.个人信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.成绩查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.综测ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.课程信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -121,18 +121,25 @@
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // 成绩查询ToolStripMenuItem
+            // 课程信息ToolStripMenuItem
             // 
-            this.成绩查询ToolStripMenuItem.Name = "成绩查询ToolStripMenuItem";
-            this.成绩查询ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
-            this.成绩查询ToolStripMenuItem.Text = "成绩查询";
-            this.成绩查询ToolStripMenuItem.Click += new System.EventHandler(this.成绩查询ToolStripMenuItem_Click);
+            this.课程信息ToolStripMenuItem.Name = "课程信息ToolStripMenuItem";
+            this.课程信息ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.课程信息ToolStripMenuItem.Text = "守则";
+            this.课程信息ToolStripMenuItem.Click += new System.EventHandler(this.课程信息ToolStripMenuItem_Click);
             // 
             // 个人信息ToolStripMenuItem
             // 
             this.个人信息ToolStripMenuItem.Name = "个人信息ToolStripMenuItem";
             this.个人信息ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.个人信息ToolStripMenuItem.Text = "个人信息";
+            // 
+            // 成绩查询ToolStripMenuItem
+            // 
+            this.成绩查询ToolStripMenuItem.Name = "成绩查询ToolStripMenuItem";
+            this.成绩查询ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.成绩查询ToolStripMenuItem.Text = "成绩查询";
+            this.成绩查询ToolStripMenuItem.Click += new System.EventHandler(this.成绩查询ToolStripMenuItem_Click);
             // 
             // 综测ToolStripMenuItem
             // 
@@ -147,13 +154,6 @@
             this.管理ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
             this.管理ToolStripMenuItem.Text = "管理";
             this.管理ToolStripMenuItem.Click += new System.EventHandler(this.管理ToolStripMenuItem_Click);
-            // 
-            // 课程信息ToolStripMenuItem
-            // 
-            this.课程信息ToolStripMenuItem.Name = "课程信息ToolStripMenuItem";
-            this.课程信息ToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
-            this.课程信息ToolStripMenuItem.Text = "守则";
-            this.课程信息ToolStripMenuItem.Click += new System.EventHandler(this.课程信息ToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -224,6 +224,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "重置密码";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -255,6 +256,7 @@
             this.label7.Size = new System.Drawing.Size(55, 15);
             this.label7.TabIndex = 11;
             this.label7.Text = "label7";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
