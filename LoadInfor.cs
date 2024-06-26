@@ -10,6 +10,7 @@ namespace 学生成绩管理系统
     {
         public static string G_Sno;
         public static string G_Sname;
+        public static string G_Mess;
 
         public static string T_Sno;
         public static string T_Sname;

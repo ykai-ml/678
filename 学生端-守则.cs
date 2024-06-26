@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace 学生成绩管理系统
 {
@@ -51,6 +52,15 @@ namespace 学生成绩管理系统
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void 学生端_守则_Load(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(LoadInfor.G_Mess))
+            {
+                MessageBox.Show(LoadInfor.G_Mess);
+            }
 
         }
     }

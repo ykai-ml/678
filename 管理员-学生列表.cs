@@ -150,5 +150,11 @@ namespace 学生成绩管理系统
         {
 
         }
+
+        private void 通知发布ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new 管理员_通知发布().Show();
+        }
     }
 }

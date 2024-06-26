@@ -50,7 +50,7 @@ namespace 学生成绩管理系统
 
                     this.Hide();
                     //管理员端窗口显示
-                    new 管理员_学生列表().Show();
+                    new 管理员_通知发布().Show();
                 }
                 else
                 {
