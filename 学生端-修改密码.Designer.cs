@@ -1,6 +1,6 @@
 ﻿namespace 学生成绩管理系统
 {
-    partial class 修改密码
+    partial class 学生端_修改密码
     {
         /// <summary>
         /// Required designer variable.
@@ -85,7 +85,7 @@
             this.label3.Text = "label3";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // 修改密码
+            // 学生端_修改密码
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -95,7 +95,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "修改密码";
+            this.Name = "学生端_修改密码";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "学生端-修改密码";
             this.ResumeLayout(false);

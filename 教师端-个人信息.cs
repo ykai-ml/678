@@ -25,7 +25,7 @@ namespace 学生成绩管理系统
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new 教师端_修改密码.show();
+            new 教师端_修改密码().Show();
         }
 
         private void 成绩查询ToolStripMenuItem_Click(object sender, EventArgs e)

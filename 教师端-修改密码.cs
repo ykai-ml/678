@@ -15,6 +15,17 @@ namespace 学生成绩管理系统
         public 教师端_修改密码()
         {
             InitializeComponent();
+            label3.Text = LoadInfor.T_Sno;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
